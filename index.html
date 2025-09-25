@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    body {
+      background: #1d1e1f;
+      margin: 0;
+    }
+    .BOX {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #7e8788;
+      height: 400px;
+      width: 700px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 10px solid #0fefff;
+      border-radius: 20px;
+      box-shadow: 0 0 10px #0fefff rgb(92, 247, 54);
+      gap: 15px;
+    }
+    input {
+      width: 60%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+    }
+    button {
+      height: 50px;
+      width: 150px;
+      background-color: orange;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: darkorange;
+    }
+  </style>
+</head>
+<body>
+  <div class="BOX">
+    <h1>Enter your UserName:</h1>
+    <input type="text" id="US" placeholder="UserName">
+    <h1>Enter your Password:</h1>
+    <input type="password" id="PW" placeholder="Password">
+    <button onclick="submitLogin()">Submit</button>
+  </div>
+
+  <script>
+    function submitLogin() {
+      const U = document.getElementById("US").value;
+      const P = document.getElementById("PW").value;
+
+      if (U === "Ayush" && P === "12345") {
+        window.open("Home_Page.html", "_blank");
+      }
+      if(U === "Roy" && P === "12345"){
+        window.open("Home_Page.html", "_blank")
+      } else {
+        alert('Incorrect UserName or Password');
+      }
+    }
+  </script>
+</body>
+</html>

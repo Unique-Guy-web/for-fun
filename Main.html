@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #6affcd;
+        }
+        .txt{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;           
+        }
+        .cl{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 64px;   /* increase this number for bigger text */
+           font-weight: bold; /* make it bold */
+            font-family: Arial, sans-serif;
+            text-align: center; /* center the text */
+            margin-top: 20px;
+        }
+        .main{
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            size: 20%;
+            background: #6affcd;
+            gap: 50px;
+        }
+        .exit{
+        color: white;         /* text color */
+        background: rgba(255, 0, 0, 0.555); /* optional: semi-transparent background */
+        padding: 8px 12px;
+        border-radius: 6px;
+        z-index: 10;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        cursor: pointer;
+    }
+    .exit:hover{
+        color: rgb(0, 0, 0);         /* text color */
+        background: rgb(255, 0, 0); /* optional: semi-transparent background */
+        padding: 12px 16px;
+        border-radius: 10px;
+        cursor:pointer;
+        z-index: 999;
+    }
+    </style>
+    <script>
+        function call(){
+            alert("This Button is not working. This would be fixed later by the developer");
+        }
+        function browser(){
+            window.location.href = "Browser.html";
+        }
+        function camera(){
+            window.location.href = "camera.html";
+        }
+        function exit(){
+        window.location.href = "Home_Page.html"
+        }
+    </script>
+</head>
+<body>
+    <div class="exit" onclick="exit()"><h1>Exit</h1></div>
+
+<script>
+  function updateClock() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2, "0");
+    const m = String(now.getMinutes()).padStart(2, "0");
+    const s = String(now.getSeconds()).padStart(2, "0");
+    document.getElementById("clock").textContent = `${h}:${m}:${s}`;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock(); // run once immediately
+</script>
+<div class="cl" id="clock"></div>
+<p><br></p>
+
+<div class="txt">
+    <h1>My Operating System</h1>
+</div>
+
+<div class="main">
+
+    <div class="call" onclick="call()">
+        <img src="Call.png" alt="Call" height="100%" width="100%">
+    </div>
+
+    <div class="browser" onclick="browser()">
+        <img src="browser.png" alt="Browser" height="100%" width="100%">
+    </div>
+
+    <div class="camera" onclick="camera()">
+        <img src="camera.png" alt="Camera" height="100%" width="100%">
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+        .Head{
+            background: rgb(0, 255, 221);
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100px;
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .right{
+            background-color: rgb(255, 190, 49);
+            position: absolute;
+            top: 45%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 350px;
+        }
+        .left{
+            background-color: rgb(255, 190, 49);
+            position: absolute;
+            top: 45%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 350px;            
+        }
+        p{
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+        }
+        body{
+            background:rgb(148, 251, 255)
+        }
+    </style>
+    <script>
+        function OS(){
+            window.location.href = "Main.html"
+        }
+        function PI(){
+            window.location.href = "personal_info(1).html"
+        }
+    </script>
+</head>
+<body>
+
+    <div class="Head">
+        <h1>Welcome To Our Website</h1>
+    </div>
+
+<div onclick="OS()" class="right">
+    <h1 style="color: darkred;">Click to open OS</h1>
+</div>
+
+<div onclick="PI()" class="left">
+    <h1 style="color: rgb(0, 124, 31);">Click to get Website Info</h1>
+</div>
+<br>
+<p>This website is created by a person just for fun. <br>
+     It's just an example of how websites are actually <br>
+     made.It's just for testing purpose. Do not take <br>
+     it seriously</p>
+</body>
+</html>
